@@ -1,0 +1,3 @@
+<ul id="archive-bar">{% for month in months %}
+    <li class="archive-item"><a href="/blog/archive/{{ month|date:"Y" }}/{{ month|date:"b" }}/">{{ month|date:"F Y" }}</a></li>{% endfor %}
+</ul>

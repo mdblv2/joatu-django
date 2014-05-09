@@ -1,0 +1,10 @@
+{% extends 'blogs/base.html' %}
+
+{% block title %} archive {{ year }}{% endblock %}
+
+{% block center_content %}{{ block.super}}
+    <div id="archive-title">{{ year }}</div>
+        {% for month in date_list %}<div class="archive-item">
+            <a href="/blog/archive/{{ month|date:"Y" }}/{{ month|date:"b" }}/"><div class="main-archive-item">{{ month|date:"F" }}</div></a>
+        </div>{% endfor %}
+{% endblock %}

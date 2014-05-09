@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-header">
+        <h4 class="panel-title">{{ feed.title }}</h4>
+    </div>
+    <div class="panel-body">
+        {% for post in recent_posts %}
+        <a href="{{ post.get_absolute_url }}">
+            <h5>{{ post.pub_date|date:"N j" }} - {{ post.title }}</h5>
+        </a>
+        {% endfor %}
+        <a href="{{ feed.get_absolute_url }}">
+            <h5>more»</h5>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+ 
+        {% block main %}
+                <div class="row">
+                    <div class="col-md-9">
+                    {% block center_block %}{% endblock %}
+                    </div>
+                    <div class="col-md-3">
+
+<!--Dropdown Toggle Form Style-->
+                        <div class="panel panel-default">
+							<ul style="list-style:none">	
+								<li class="dropdown">
+								<a class="dropdown-toggle.btn btn-xs btn-warning" data-toggle="dropdown" href="#">
+								Log In
+ 								<b class="caret"></b>
+ 								</a>
+ 								<ul class="dropdown-menu">
+ 								<li>{% if request.user.is_authenticated %}<h5>Welcome, <a href="{{ request.user.joatuuser_set.all.0.get_absolute_url }}">{% firstof request.user.get_full_name request.user.username %}</h5>
+                            	<a href="{% url 'profile_logout' %}">logout</a>
+                            	{% else %}
+                            	<form method="post" action="{% url 'profile_login' %}" role="form">
+                                {% csrf_token %}
+                                <div class="form-group"> 
+                                    <input id="id_username" class="form-control" placeholder="username" type="text" name="username" maxlength="30" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="password" type="password" name="password" id="id_password" />
+                                </div>
+                                <input class="btn btn-xs btn-warning" type="submit" value="log in" />
+                                <input type="hidden" name="next" value="" />
+                            </form>
+                            <h5><a class="btn btn-xs btn-warning" href="{% url 'profile_create' %}">Sign Up</a> </h5>
+                            {% endif %}
+							</li>
+							</ul> <!-- /dropdown login style -->
+<!-- Separate Login Page Style 
+							<h5><a class="btn btn-xs btn-warning" href="{% url 'profile_login' %}">Log In</a> </h5>
+							<h5><a class="btn btn-xs btn-warning" href="{% url 'profile_create' %}">Sign Up</a> </h5>
+							--><!-- /separate login page style -->
+							</ul>	
+                        </div>
+                       {% load joatu_tags %}
+                        {% feed_box News 3 %}
+                        {% feed_box Development 3 %}
+                    </div>        
+                </div>
+        {% endblock %}
+
+

@@ -1,0 +1,20 @@
+{% extends 'site_base.html' %}
+
+
+{% block center_block %}
+
+{% for post in object_list %}
+    <div class="panel panel-default">
+        <div class="panel-header">
+            <h4 class="panel-title">{{ post.title }}</h4>
+        </div>
+        <div class="panel-body">
+            {{ post.body|safe }}
+        </div>
+    </div>
+{% endfor %}
+
+
+{% endblock %}
+
+

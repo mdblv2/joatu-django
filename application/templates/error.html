@@ -1,0 +1,13 @@
+{% extends 'site_base.html %}
+
+{% block center_block %}
+
+    <div class="panel">
+        <p>We're sorry, but there was a problem.</p>
+        <p>{% block error_message %}{% endblock %}</p>
+        <p>Let us know if we can help.</p>
+    </div>
+
+{% endblock %}
+
+

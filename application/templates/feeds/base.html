@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load base_info %}
+
+{% block header_extension %}
+    {% blog_header %}
+{% endblock %}
+
+{% block main %}
+                <div id="right-bar">
+                    <div id="social-media">
+                        <div id="facebook"><a href="https://www.facebook.com/pages/fART-LyFE/521634897916745"><img src="/media/images/logos/facebook.png" alt='Facebook'></a></div>
+                        <div id="twitter"><a href="http://www.twitter.com/FartLyfe"><img src="/media/images/logos/twitter.png" alt='Twitter'></a></div>
+                    </div>
+                    <div class="recent-list">
+                        <div class="head-line">recent posts</div>
+                        <div class="recent-box box">
+                            {% show_recent posts %}
+                        </div>
+                    </div>
+                    <div class="recent-list">
+                        <div class="head-line">recent podcasts</div>
+                        <div class="recent-box box">
+                            {% show_recent podcasts %}
+                        </div>
+                    </div>
+                </div>
+                <div id="main-bar">   
+                    {% block center_content %}{% endblock %}
+                </div>
+
+{% endblock %}
+

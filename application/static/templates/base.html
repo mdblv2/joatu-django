@@ -1,0 +1,57 @@
+<html>
+    <head>
+    <title>JOATU – The Online Community Marketplace</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% block css %}
+    <link rel="stylesheet" href="/static/css/joatu.css" media="screen">
+    {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <header>
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="navbar-header" >
+<img src="{% static "img/common/JOATULogoWhite_Small.png" %}"/>
+                                </div>
+                            </nav>
+                        </header>
+                    </div>
+                </div>
+
+                {% block main %}{% endblock %}
+                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <footer>
+ 								<div class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header">
+<a class="navbar-brand" href="#"></a>
+</div>
+<div class="navbar-collapse collapse">
+<ul style="margin: 0% 25%" class="nav navbar-nav">
+</li>
+										<li{% if request.path == '/about/' %} class="active"{% endif %}><a href="/about/">About</a></li>
+                                        <li{% if request.path == '/donate/' %} class="active"{% endif %}><a href="/donate/">Donate</a></li>
+                                        <li{% if request.path == '/faq/' %} class="active"{% endif %}><a href="/faq/">FAQ</a></li>
+                                        <li{% if request.path == '/volunteer/' %} class="active"{% endif %}><a href="/volunteer/">Volunteer</a></li>
+</ul>
+</div>
+</div>
+</div>	
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% block javascript %}{% endblock %}
+    <script src="https://code.jquery.com/jquery.js"></script>
+    {% bootstrap_javascript %}
+    </body>
+</html>

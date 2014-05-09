@@ -1,0 +1,26 @@
+
+                <div id="top-posts">
+                    <ul id="featured-list">
+                    {% for entry in entries %}
+                        <li>
+                            <a href="{{ entry.get_absolute_url }}">
+                                <div class="featured-story">
+                                    <img class="featured-picture" src="{{ entry.cover.get_featured_thumbnail_url }}">
+                                    <div class="tinter">
+                                        <div class="featured-text">
+                                            <div class="featured-headline">{{ entry.title }}</div>
+                                            <div class="featured-summary">{{ entry.summary }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div id="blog-list">
+                    <ul><a href="/blogs/">blogs</a> {% for blog in blogs %}
+                        <li> » <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>

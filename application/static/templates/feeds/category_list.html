@@ -1,0 +1,10 @@
+{% extends 'blogs/base.html' %}
+
+{% block title %} - category archive : {{ category.title }}{% endblock %}
+
+{% block center_content %}
+    <div id="archive-title"><a href="/blog/category/"><< More</a> | {{ category.title }}</div>{% for entry in entries %}
+        <div class="archive-item">
+            <a href="{{ entry.get_absolute_url }}"><div class="main-archive-item">{{ entry.title }}</div></a>
+        </div>{% endfor %}
+{% endblock %}

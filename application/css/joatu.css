@@ -1,0 +1,100 @@
+header {
+        margin:-15px -26px 15px -26px;
+}
+body {
+background: #7d7e7d; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM3ZDdlN2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGUwZTBlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-radial-gradient(center, ellipse cover,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+color:#c4c4c4
+
+}
+
+.container{
+background:none;
+margin:10px 10px
+}
+
+#brand-lg {
+background:url('common/JOATULogoWhite_Med.png');
+background-repeat:no-repeat;
+width:278px;
+height:415px;
+margin-left:auto;
+margin-right:auto;
+position: relative;
+
+
+}
+
+#brand-lg h3{
+position: absolute;
+	bottom: 0px;
+right:1em
+}
+
+.navbar-brand {
+		background:url('common/JOATULogoWhite_Small.png');
+		text-indent:-9999px;
+		float:left;
+		width:125px;
+		height:35px
+}
+.navbar-brand p {
+        color:#eee;
+}
+
+.navbar-default {
+background:none;
+border:none
+}
+
+.navbar-default .navbar-nav>li>a {
+        color:#eee;
+        text-shadow:0px 1px 1px rgba(0,0,0,.3);
+padding:5px;
+margin-left:10px
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+        color:#eee;
+}
+
+.active {
+        background:none;
+        color:#4D4D4D;
+}
+
+.panel {
+        padding:10px;
+		background:none;
+		border:none;
+}
+
+.row {
+margin-left:auto;
+margin-right:auto;
+height:inherit;
+width:inherit
+
+}
+
+.col-md-9 {
+margin-left:auto;
+margin-right:auto;
+
+}
+
+ul.errorlist>li {
+        list-style:none;
+        color:#B20000;
+}
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'site_base.html' %}
+
+
+{% block center_block %}
+
+    <div class="panel panel-default">
+        {% if object.user == request.user %}<a href="{% url 'profile_edit' %}"><p class="pull-right">edit</p></a>{% endif %}
+        <div class="panel-header">
+            <h4 class="panel-title">{% firstof object.user.get_full_name object.user.username %}</h4>
+        </div>
+        <div class="panel-body">
+            {% if object.user.get_full_name %}
+            <p>Username: {{ object.user.username }}</p>
+            {% endif %}
+            <p>Member for {{ object.user.date_joined|timesince }}</p>
+            </br>
+            <h5>Locations:</h5>
+            {% for place in object.locations.all %}
+            <p>{{ place.title }}</p>
+            {% empty %}
+            {% if object.alternate_location %}
+            <p>{{ object.alternate_location }}</p>
+            {% else %}
+            <p>This user hasn't share any locations.</p>
+            {% endif %}
+            {% endfor %}
+            </br>
+            <h5>Skills:</h5>
+            {% for skill in object.skills.all %}
+            <p>{{ skill.title }}</p>
+            {% empty %}
+            <p>This user hasn't added any skills.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+

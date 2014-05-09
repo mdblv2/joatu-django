@@ -1,0 +1,23 @@
+{% extends 'blogs/base.html' %}
+
+{% block center_content %}
+            <div class="section-header">all {{ item_type }}s</div>
+                <ul id="item-list">
+                {% for item in items %}
+                    <li>
+                        <a href="{{ item.get_absolute_url }}">
+                        <h3>{{ item.title }}</h3>
+                        <div class="check-border">
+                            <img src="{{ item.get_blog_header_url }}">
+                            <div class="hover-shadow">
+                                {{ item.description|safe }}
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+                </div>
+            </div>
+    
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends 'site_base.html' %}
+
+{% block center_block %}
+<form method="post" action="">{% csrf_token %}
+    {% load widget_tweaks %}
+    <div class="row">
+        <div id="user-form" class="col-md-6 panel panel-default">
+            {% for field in user_form %}
+            <div class="form-group fieldWrapper">
+                {{ field.label_tag }}
+                {{ field.errors }}
+                {% render_field field class+="form-control" %}
+            </div>
+            {% endfor %}
+            <a href="{% url 'password_change' %}"><p>change password</p></a>
+            <a href="{% url 'password_reset' %}"><p>reset password</p></a>
+        </div>
+        
+        <div id="joatu-user-form" class="col-md-6 panel panel-default">
+            {% for field in joatu_user_form %}
+            <div class="form-group fieldWrapper">
+                {{ field.label_tag }}
+                {{ field.errors }}
+                {% render_field field class+="form-control" %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-default"/>submit</button>
+    </div>
+</form>
+
+{% endblock %}
+
+
